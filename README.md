@@ -38,14 +38,28 @@ pip install --upgrade glossmod-mcp
 ### 配置
 
 ```json
-"glossmod-mcp": {
-    "type": "stdio",
-    "command": "uvx",
-    "args": ["glossmod-mcp"],
-    "env": {
-        "GLOSSMOD_API_KEY": "<YOUR_API_KEY_HERE>"
-    }
+{
+    "servers": {
+        "glossmod-mcp": {
+            "type": "stdio",
+            "command": "uvx",
+            "args": ["glossmod-mcp"],
+            "env": {
+                "GLOSSMOD_API_KEY": "${input:GLOSSMOD_API_KEY}"
+            }
+        }
+    },
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "GLOSSMOD_API_KEY",
+            "description": "输入你的Mod站 API",
+            "default": "",
+            "password": true
+        }
+    ]
 }
+
 
 ```
 
