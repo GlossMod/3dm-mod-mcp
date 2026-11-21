@@ -2,3 +2,8 @@ recursive-include glossmod_mcp *.py
 include README.md
 include LICENSE
 include requirements.txt
+
+prune docs
+prune scripts
+prune .github
+exclude main.py .gitignore .python-version

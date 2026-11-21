@@ -1,13 +1,13 @@
 [build-system]
-requires = ["setuptools>=65.0", "wheel"]
+requires = ["setuptools>=77", "setuptools-scm>=8.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "glossmod-mcp"
-version = "1.2.0"
+name = "3dm-mod-mcp"
+dynamic = ["version"]
 description = "MCP 服务器 - 3DM Mod API 集成"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.11"
 authors = [
     {name = "小莫", email = "xiaomo1433675239@outlook.com"}
@@ -19,15 +19,22 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "mcp[cli]>=1.18.0",
+    "mcp[cli]>=1.18.0,<2",
     "httpx>=0.24.0",
     "pydantic>=2.0.0",
 ]
 
 [project.urls]
-Homepage = "https://github.com/GlossMod/gloss-mod-mcp"
-Repository = "https://github.com/GlossMod/gloss-mod-mcp.git"
-Documentation = "https://github.com/GlossMod/gloss-mod-mcp/docs"
+Homepage = "https://github.com/GlossMod/3dm-mod-mcp"
+Repository = "https://github.com/GlossMod/3dm-mod-mcp.git"
+Documentation = "https://github.com/GlossMod/3dm-mod-mcp/tree/main/docs"
 
 [project.scripts]
-glossmod-mcp = "glossmod_mcp.server:main"
+3dm-mod-mcp = "glossmod_mcp.server:main"
+
+[tool.setuptools]
+packages = ["glossmod_mcp"]
+
+[tool.setuptools_scm]
+parentdir_prefix_version = "3dm-mod-mcp-"
+fallback_version = "0+unknown"

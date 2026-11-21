@@ -4,7 +4,7 @@
 提供对 3DM Mod 网站数据的访问，包括游戏、Mod、Minecraft 等相关功能。
 
 cd 到工作目录并运行：
-    uv run server stdio
+    uv run 3dm-mod-mcp
 """
 
 import os

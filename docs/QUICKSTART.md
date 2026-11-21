@@ -6,10 +6,19 @@
 
 ## 步骤 1: 准备环境
 
-### 安装依赖
+### 安装已发布的包
 
 ```bash
-cd GlossModMCP
+python -m pip install 3dm-mod-mcp
+```
+
+在 MCP 客户端中使用 `uvx 3dm-mod-mcp`（`command` 为 `uvx`，`args` 为 `["3dm-mod-mcp"]`）即可按需运行，无需提前用 pip 安装。若此前用过旧发行包，请同步更新客户端的命令参数；`GLOSSMOD_API_KEY` 和 Python 导入名 `glossmod_mcp` 不变。
+
+### 从源码开发（可选）
+
+```bash
+git clone https://github.com/GlossMod/3dm-mod-mcp.git
+cd 3dm-mod-mcp
 uv sync
 ```
 
@@ -24,12 +33,12 @@ $env:GLOSSMOD_API_KEY = "your-api-key-here"
 # 或者在系统环境变量中设置
 ```
 
-## 步骤 3: 测试服务器
+## 步骤 3: 测试服务器（在源码仓库中）
 
 ### 方法 A: 使用 MCP Inspector（推荐用于开发）
 
 ```bash
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 ```
 
 这将打开 MCP Inspector，让你可以：
@@ -41,7 +50,7 @@ uv run mcp dev server.py
 ### 方法 B: 在 Claude Desktop 中使用
 
 ```bash
-uv run mcp install server.py
+uv run mcp install glossmod_mcp/server.py
 ```
 
 然后在 Claude Desktop 中的设置中启用此服务器。

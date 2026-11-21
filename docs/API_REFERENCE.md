@@ -283,7 +283,7 @@ uv run test_server.py
 ### 使用 MCP Inspector
 
 ```bash
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 ```
 
 ---
@@ -407,7 +407,7 @@ uv sync
 uv sync
 
 # 2. 启动服务器
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 
 # 3. 开始使用
 # 在 Claude 或其他应用中使用

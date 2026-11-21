@@ -87,18 +87,18 @@ GlossModMCP/
 
 ### 安装依赖
 ```bash
-cd GlossModMCP
+cd 3dm-mod-mcp
 uv sync
 ```
 
 ### 开发模式（MCP Inspector）
 ```bash
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 ```
 
 ### Claude Desktop 集成
 ```bash
-uv run mcp install server.py
+uv run mcp install glossmod_mcp/server.py
 ```
 
 ### 运行测试

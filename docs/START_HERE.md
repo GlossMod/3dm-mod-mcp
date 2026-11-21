@@ -17,10 +17,12 @@
 
 ## ⚡ 快速开始 (3分钟)
 
+使用已发布的版本时，直接通过 `uvx 3dm-mod-mcp` 启动，或运行 `python -m pip install 3dm-mod-mcp` 后使用 `3dm-mod-mcp`。以下步骤适用于源码检出。
+
 ### 1️⃣ 安装依赖
 
 ```bash
-cd GlossModMCP
+cd 3dm-mod-mcp
 uv sync
 ```
 
@@ -28,10 +30,10 @@ uv sync
 
 ```bash
 # 开发模式 (推荐)
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 
 # 或 Claude Desktop 集成
-uv run mcp install server.py
+uv run mcp install glossmod_mcp/server.py
 ```
 
 ### 3️⃣ 开始使用
@@ -186,13 +188,13 @@ export GLOSSMOD_API_KEY="your-api-key"
 ### Claude Desktop
 
 ```bash
-uv run mcp install server.py
+uv run mcp install glossmod_mcp/server.py
 ```
 
 ### 自定义客户端
 
 ```bash
-uv run server stdio
+uv run 3dm-mod-mcp
 ```
 
 ## 📞 常见问题
@@ -211,7 +213,7 @@ uv run server stdio
 
 ## 🎯 下一步
 
-1. **快速上手** → 运行 `uv sync` 和 `uv run mcp dev server.py`
+1. **快速上手** → 运行 `uv sync` 和 `uv run mcp dev glossmod_mcp/server.py`
 2. **学习功能** → 阅读 [README_SERVER.md](./README_SERVER.md)
 3. **运行测试** → 执行 `uv run test_server.py`
 4. **开始使用** → 在 Claude 中开始提问
@@ -281,9 +283,9 @@ GlossModMCP/
 
 ```bash
 # 一键启动
-cd GlossModMCP
+cd 3dm-mod-mcp
 uv sync
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 ```
 
 **现在就开始吧！** 🚀✨

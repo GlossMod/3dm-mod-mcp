@@ -52,7 +52,7 @@ GlossModMCP 项目入口文档
 uv sync
 
 # 2. 启动服务器
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 
 # 3. 在 Claude 或其他应用中使用
 ```
@@ -288,13 +288,13 @@ GlossModMCP/
 
 ```bash
 # 开发模式 (MCP Inspector)
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 
 # Claude Desktop
-uv run mcp install server.py
+uv run mcp install glossmod_mcp/server.py
 
 # 标准输入输出
-uv run server stdio
+uv run 3dm-mod-mcp
 
 # 运行测试
 uv run test_server.py
@@ -327,7 +327,7 @@ uv run test_server.py
 ### 路径 1: 快速使用 (5分钟)
 ```
 1. 运行 uv sync
-2. 运行 uv run mcp dev server.py
+2. 运行 uv run mcp dev glossmod_mcp/server.py
 3. 在 Claude 中使用
 ```
 
@@ -413,7 +413,7 @@ uv run test_server.py
 uv sync
 
 # 2. 启动服务器
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 
 # 3. 开始使用！
 ```
@@ -485,9 +485,9 @@ MIT License
 **现在就启动你的 MCP 服务器吧！**
 
 ```bash
-cd GlossModMCP
+cd 3dm-mod-mcp
 uv sync
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 ```
 
 **祝你使用愉快！** 🚀✨

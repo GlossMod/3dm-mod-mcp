@@ -65,7 +65,17 @@ MCP 资源提供结构化的数据访问：
 - Python 3.11+
 - `uv` 包管理器
 
-### 安装依赖
+### 安装已发布的包
+
+```bash
+python -m pip install 3dm-mod-mcp
+```
+
+已安装时可直接运行 `3dm-mod-mcp`；也可以让 MCP 客户端通过 `uvx 3dm-mod-mcp` 按需运行。Python 模块名仍为 `glossmod_mcp`。
+
+### 从源码安装依赖
+
+在 `GlossMod/3dm-mod-mcp` 仓库根目录运行：
 
 ```bash
 uv sync
@@ -79,12 +89,12 @@ uv sync
 $env:GLOSSMOD_API_KEY = "your-api-key"
 ```
 
-### 运行服务器
+### 从源码运行服务器
 
 #### 1. 开发模式（使用 MCP Inspector）
 
 ```bash
-uv run mcp dev server.py
+uv run mcp dev glossmod_mcp/server.py
 ```
 
 这将启动 MCP Inspector，允许你交互式地测试工具、资源和提示。
@@ -92,13 +102,13 @@ uv run mcp dev server.py
 #### 2. 标准输入输出模式
 
 ```bash
-uv run server stdio
+uv run 3dm-mod-mcp
 ```
 
 #### 3. Claude Desktop 集成
 
 ```bash
-uv run mcp install server.py
+uv run mcp install glossmod_mcp/server.py
 ```
 
 然后在 Claude Desktop 中使用此服务器。

@@ -2,3 +2,6 @@
 __pycache__
 *.lock
 .vscode
+*.egg-info/
+build/
+dist/
